@@ -17,40 +17,42 @@ import javax.persistence.Table;
  * @author Andres Solorzano
  */
 @Entity
-@Table(name="puestos")
+@Table(name="estados")
 public class puestos {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Dbid")
-    private Long idPuesto;
+    @Column(name = "estados_id")
+    private Long idEstados;
     
-    @Column(name = "puesto")
-    private String puesto;
+    @Column(name = "Descripcion")
+    private String descripcion;
 
     public puestos() {
     }
 
-    public Long getIdPuesto() {
-        return idPuesto;
+    public Long getIdEstados() {
+        return idEstados;
     }
 
-    public void setIdPuesto(Long idPuesto) {
-        this.idPuesto = idPuesto;
+    public void setIdEstados(Long idEstados) {
+        this.idEstados = idEstados;
     }
 
-    public String getPuesto() {
-        return puesto;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     @Override
     public String toString() {
-        return "Salas{" + "idPuesto=" + idPuesto + ", puesto=" + puesto + '}';
+        return "puestos{" + "idEstados=" + idEstados + ", descripcion=" + descripcion + '}';
     }
+
+    
     
     
 

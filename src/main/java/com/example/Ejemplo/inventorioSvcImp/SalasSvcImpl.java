@@ -43,8 +43,8 @@ public class SalasSvcImpl implements SalasService {
     @Override
     public Optional<puestos> findpuesto(Long id) {
         
-        List<puestos> p = salarepository.findbynombre("seguridad");
-        System.out.println(p);
+        //List<puestos> p = salarepository.findbynombre("seguridad");
+        //System.out.println(p);
         
         return salarepository.findById(id);
     }

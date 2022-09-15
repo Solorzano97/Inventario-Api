@@ -27,7 +27,7 @@ public interface SalaRepository extends JpaRepository<puestos , Long> {
    
     
     @Query(
-            value = "select * from clinica_psicologica.puestos p where puesto = :nombre",
+            value = "select * from inventory.estados e where  Descripcion  = :nombre",
             nativeQuery=true
     )
      List<puestos> findbynombre(@Param("nombre") String nombre);

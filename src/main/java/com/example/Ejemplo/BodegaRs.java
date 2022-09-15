@@ -5,8 +5,7 @@
  */
 package com.example.Ejemplo;
 
-import com.example.Ejemplo.Model.puestos;
-import com.example.Ejemplo.interfaz.SalasService;
+import com.example.Ejemplo.Model.estados;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -21,32 +20,34 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.example.Ejemplo.interfaz.BodegasSvc;
 
 
 @RestController
-@RequestMapping("/salitas")
-public class Controller {
+@RequestMapping("/bodegas")
+public class BodegaRs {
     @Autowired
-    private SalasService salasservice;
+    private BodegasSvc salasservice;
     
     @GetMapping(value = "/all" , produces = MediaType.APPLICATION_JSON_VALUE)
-    public ArrayList<puestos> hola(){
+    public ArrayList<estados> hola(){
         return salasservice.listar();
     }
     
     @PostMapping(value = "/save" , produces = MediaType.APPLICATION_JSON_VALUE)
-    public puestos guardarUsuario(@RequestBody puestos salas){
+    public estados guardarUsuario(@RequestBody estados salas){
+    
         return this.salasservice.addsala(salas);
     }
     
     @GetMapping(value = "/findbydbid/{id}" , produces = MediaType.APPLICATION_JSON_VALUE)
-    public Optional <puestos> findpuesto (@PathVariable("id") Long id){
-        Optional<puestos> p = salasservice.findpuesto(id);
+    public Optional <estados> findpuesto (@PathVariable("id") Long id){
+        Optional<estados> p = salasservice.findpuesto(id);
         return p;
     }
     
     /*@Autowired
-    private SalasService salasservice;
+    private BodegasSvc salasservice;
     @GetMapping("/list")
     public List<Salas>listar(){
         return salasservice.listar();

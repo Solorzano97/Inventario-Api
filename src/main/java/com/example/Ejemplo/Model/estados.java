@@ -18,17 +18,17 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="estados")
-public class puestos {
+public class estados {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "estados_id")
+    @Column(name = "id_estados")
     private Long idEstados;
     
-    @Column(name = "Descripcion")
+    @Column(name = "descripcion_estado")
     private String descripcion;
 
-    public puestos() {
+    public estados() {
     }
 
     public Long getIdEstados() {

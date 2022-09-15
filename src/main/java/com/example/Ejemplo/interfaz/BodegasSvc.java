@@ -5,10 +5,10 @@
  */
 package com.example.Ejemplo.interfaz;
 
-import com.example.Ejemplo.Model.puestos;
-import com.example.Ejemplo.Model.puestos;
-import com.example.Ejemplo.Model.puestos;
-import com.example.Ejemplo.Model.puestos;
+import com.example.Ejemplo.Model.estados;
+import com.example.Ejemplo.Model.estados;
+import com.example.Ejemplo.Model.estados;
+import com.example.Ejemplo.Model.estados;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -19,10 +19,10 @@ import org.springframework.stereotype.Component;
  * @author Andres Solorzano
  */
 
-public interface SalasService {
+public interface BodegasSvc {
     
-    ArrayList<puestos>listar();
-    puestos addsala(puestos s);
-    Optional<puestos> findpuesto(Long id);
+    ArrayList<estados>listar();
+    estados addsala(estados s);
+    Optional<estados> findpuesto(Long id);
     
 }
